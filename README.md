@@ -6,4 +6,4 @@
 1. Expanding Card
 
 <br />
-출처: <a target="_blank" rel="noreferrer noopenner">https://github.com/bradtraversy/50projects50days</a>
+출처: <a href="https://github.com/bradtraversy/50projects50days" target="_blank" rel="noreferrer noopenner">https://github.com/bradtraversy/50projects50days</a>
