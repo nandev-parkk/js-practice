@@ -35,11 +35,11 @@ function update() {
   }%`;
 
   if (currentActive === 1) {
-    prevBtnEl.setAttribute("disabled", "disabled");
+    prevBtnEl.setAttribute("disabled", "");
   } else if (currentActive === 4) {
-    nextBtnEl.setAttribute("disabled", "disabled");
+    nextBtnEl.setAttribute("disabled", "");
   } else {
-    prevBtnEl.removeAttribute("disabled", "disabled");
-    nextBtnEl.removeAttribute("disabled", "disabled");
+    prevBtnEl.removeAttribute("disabled", "");
+    nextBtnEl.removeAttribute("disabled", "");
   }
 }
