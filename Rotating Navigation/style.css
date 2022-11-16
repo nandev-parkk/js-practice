@@ -1,0 +1,146 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+  position: relative;
+  padding: 80px;
+  transform-origin: top left;
+  transition: 1s;
+}
+
+.container.active {
+  transform: rotate(-20deg);
+}
+
+.container .menu {
+  width: 220px;
+  height: 220px;
+  background-color: red;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  transition: transform 1s;
+}
+
+.container.active .menu {
+  transform: translate(-50%, -50%) rotate(-70deg);
+  position: absolute;
+}
+
+.container .menu .icon {
+  position: absolute;
+}
+
+.container .menu .icon.icon--menu {
+  right: 50px;
+  bottom: 50px;
+}
+.container .menu .icon.icon--close {
+  left: 50px;
+  bottom: 50px;
+}
+
+.container .menu .icon span.material-icons {
+  color: #fff;
+  font-size: 32px;
+}
+
+.container .items {
+  width: min(100%, 1000px);
+  margin: 0 auto;
+}
+
+.container .items hgroup {
+  margin-bottom: 20px;
+}
+
+.container .items hgroup .title {
+}
+
+.container .items hgroup .sub-title {
+  font-style: italic;
+}
+
+.container .items .item {
+}
+
+.container .items .item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.container .items .item .item-title {
+  margin-bottom: 20px;
+}
+
+.container .items .item .item-img {
+  margin-bottom: 20px;
+}
+
+.container .items .item .item-desc {
+  line-height: 1.6;
+}
+
+.floating {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  color: #fff;
+  padding-left: 30px;
+}
+
+.floating.active .item {
+  transform: translateX(0) !important;
+}
+
+.floating .item {
+  display: flex;
+  align-items: center;
+  transition: 0.4s ease-in;
+  transition-delay: 0.3s;
+  transform: translateX(-100%);
+}
+
+.floating .item:nth-of-type(2) {
+  margin-left: 15px;
+  transform: translateX(-150%);
+}
+
+.floating .item:last-child {
+  margin-left: 30px;
+  transform: translateX(-200%);
+}
+
+.floating .item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.floating .item .icon {
+  margin-right: 10px;
+}
