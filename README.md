@@ -7,6 +7,7 @@
 2. Progress Steps
 3. Rotating Navigation
 4. Hidden Search
+5. Blurry Loading
 
 <br />
 출처: <a href="https://github.com/bradtraversy/50projects50days" target="_blank" rel="noreferrer noopenner">https://github.com/bradtraversy/50projects50days</a>
