@@ -1,26 +1,16 @@
 "use strict";
 
 const itemEls = document.querySelectorAll(".item");
+const height = (window.innerHeight / 5) * 4;
 
-const callback = (entries, observer) => {
-  entries.forEach((entry) => {
-    console.log(entry);
-    if (entry.isIntersecting) {
-      entry.target.classList.add("active");
+window.addEventListener("scroll", () => {
+  itemEls.forEach((item) => {
+    const rectTopValue = item.getBoundingClientRect().top;
+
+    if (rectTopValue < height) {
+      item.classList.add("show");
     } else {
-      entry.target.classList.remove("active");
+      item.classList.remove("show");
     }
   });
-};
-
-const options = {
-  root: null,
-  rootMargin: "50px",
-  threshold: 0.4,
-};
-
-const observer = new IntersectionObserver(callback, options);
-
-itemEls.forEach((item) => {
-  observer.observe(item);
 });

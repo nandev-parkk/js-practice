@@ -41,13 +41,13 @@ h1 {
 }
 
 .items .item:nth-of-type(odd) {
-  transform: translateX(400px);
+  transform: translateX(400%);
 }
 
 .items .item:nth-of-type(even) {
-  transform: translateX(-400px);
+  transform: translateX(-400%);
 }
 
-.items .item.active {
+.items .item.show {
   transform: translateX(0);
 }

@@ -4,7 +4,7 @@ const imgEl = document.querySelector(".bg");
 const percentEl = document.querySelector(".percent");
 
 function handleChange() {
-  let percentValue = 1;
+  let percentValue = 0;
 
   const interval = setInterval(() => {
     if (100 <= percentValue) {
