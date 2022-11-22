@@ -3,7 +3,9 @@
 const itemEls = document.querySelectorAll(".item");
 const height = (window.innerHeight / 5) * 4;
 
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll", handleChange);
+
+function handleChange() {
   itemEls.forEach((item) => {
     const rectTopValue = item.getBoundingClientRect().top;
 
@@ -13,4 +15,6 @@ window.addEventListener("scroll", () => {
       item.classList.remove("show");
     }
   });
-});
+}
+
+handleChange();
