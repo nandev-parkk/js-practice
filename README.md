@@ -12,6 +12,7 @@
 7. Split Landing Page
 8. Form Wave
 9. Sound Board
+10. Dad Jokes
 
 <br />
 출처: <a href="https://github.com/bradtraversy/50projects50days" target="_blank" rel="noreferrer noopenner">https://github.com/bradtraversy/50projects50days</a>
