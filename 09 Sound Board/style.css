@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: plum;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.container .btn {
+  color: #fff;
+  font-size: 22px;
+  padding: 30px 50px;
+  background-color: purple;
+  border-radius: 4px;
+  margin: 14px;
+}
+
+.container .btn:hover {
+  filter: brightness(110%);
+}
