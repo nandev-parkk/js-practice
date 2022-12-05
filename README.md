@@ -14,6 +14,7 @@
 9. Sound Board
 10. Dad Jokes
 11. Event Keycodes
+12. Faq Collapse
 
 <br />
 출처: <a href="https://github.com/bradtraversy/50projects50days" target="_blank" rel="noreferrer noopenner">https://github.com/bradtraversy/50projects50days</a>
