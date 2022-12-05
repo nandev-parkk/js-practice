@@ -19,7 +19,6 @@ const descEl = document.querySelector(".desc");
 const btnEl = document.querySelector(".btn");
 
 window.addEventListener("DOMContentLoaded", handleRandomText);
-
 btnEl.addEventListener("click", handleRandomText);
 
 function handleRandomText() {
