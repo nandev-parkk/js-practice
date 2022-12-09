@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+body {
+  height: 100vh;
+  position: relative;
+  display: grid;
+  place-items: center;
+  background-color: darkorchid;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2 {
+  font-weight: normal;
+}
+
+.item {
+  color: white;
+  text-align: center;
+  display: inline-block;
+  margin: 20px;
+}
+
+.item .material-icons {
+  font-size: 50px;
+}
+
+.item .nums {
+  font-size: 50px;
+}
+
+.item .nums .num {
+}
+
+.item .desc {
+  font-size: 20px;
+}

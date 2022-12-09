@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+body {
+  height: 100vh;
+  position: relative;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2 {
+  font-weight: normal;
+}
+
+.top {
+  height: 50%;
+  background-color: lightblue;
+}
+
+.bottom {
+  height: 50%;
+  background-color: dodgerblue;
+}
+
+/* transition을 줘서 초기 상태에서 active된 상태로 설정한 시간에 걸쳐 서서히 적용되게 만든다. */
+
+.nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px #aaa;
+  transition: width 1s linear;
+  width: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.nav ul {
+  width: 0;
+  margin-right: 0;
+  transition: 1s linear;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav ul li {
+  transform: rotateY(0deg);
+  opacity: 0;
+  transition: transform 1s linear, opacity 1s linear;
+}
+
+.nav ul li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav .btn {
+  position: relative;
+  z-index: 1;
+}
+
+.nav .btn .line {
+  width: 20px;
+  height: 2px;
+  background-color: dodgerblue;
+  display: block;
+  transition: transform 1s linear;
+  transform: rotate(0);
+}
+
+.nav .btn .line:not(:last-child) {
+  margin-bottom: 6px;
+}
+
+.nav.active {
+  width: 350px;
+}
+
+.nav.active ul {
+  width: 100%;
+  opacity: 1;
+  margin-right: 30px;
+}
+
+.nav.active ul li {
+  transform: rotateY(360deg);
+  opacity: 1;
+}
+
+.nav.active .btn .line1 {
+  transform: rotate(-765deg) translateY(5.5px);
+}
+
+.nav.active .btn .line2 {
+  transform: rotate(765deg) translateY(-5.5px);
+}
