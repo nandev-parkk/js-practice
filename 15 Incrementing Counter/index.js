@@ -19,7 +19,7 @@ numsEls.forEach((el) => {
     const currentValue = +el.textContent;
 
     // 증가시키고자하는 만큼의 숫자를 구한다
-    const increment = target / 500;
+    const increment = target / 400;
 
     // currentValue가 target보다 작을 때까지 함수 실행
     if (currentValue < target) {
