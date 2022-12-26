@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+body {
+  height: 100vh;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2 {
+  font-weight: normal;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  position: absolute;
+  top: -9999;
+  left: -9999;
+  opacity: 0;
+  visibility: hidden;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+:root {
+  --color-white: #fff;
+  --color-black: #222;
+  --color-gray: #999;
+}
+
+body.dark-mode {
+  background-color: var(--color-black);
+}
+
+body.dark-mode .toggle {
+  background-color: white;
+  color: var(--color-black);
+}
+
+body.dark-mode .container .clock::after {
+  background-color: var(--color-white);
+}
+
+body.dark-mode .container .clock .hour-hand,
+body.dark-mode .container .clock .minute-hand {
+  background-color: var(--color-white);
+}
+
+body.dark-mode .container .wrapper .time {
+  color: var(--color-white);
+}
+
+body.dark-mode .container .wrapper .dayOfTheWeek .date {
+  color: var(--color-black);
+  background-color: var(--color-white);
+}
+
+.toggle {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 8px 14px;
+  border-radius: 4px;
+}
+
+.container {
+}
+
+.container .clock {
+  position: relative;
+  height: 200px;
+}
+
+.container .clock::after {
+  content: "";
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  border: 3px solid tomato;
+  background-color: var(--color-black);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container .clock .hand {
+  width: 3px;
+  background-color: var(--color-black);
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  transition: 0.5s ease-in;
+}
+
+.container .clock .hour-hand {
+  height: 60px;
+  transform: translate(-50%, -100%) rotate(0);
+}
+
+.container .clock .minute-hand {
+  height: 90px;
+  transform: translate(-50%, -100%) rotate(0);
+}
+
+.container .clock .second-hand {
+  background-color: tomato;
+  height: 120px;
+  transform: translate(-50%, -100%) rotate(0);
+}
+
+.container .wrapper {
+  text-align: center;
+}
+
+.container .wrapper .time {
+  display: inline-flex;
+  font-size: 58px;
+}
+
+.container .wrapper .dayOfTheWeek {
+  color: var(--color-gray);
+  font-size: 14px;
+}
+
+.container .wrapper .dayOfTheWeek .date {
+  color: var(--color-white);
+  font-size: 13px;
+  background-color: var(--color-black);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
