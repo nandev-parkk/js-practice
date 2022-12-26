@@ -109,7 +109,7 @@ body.dark-mode .container .wrapper .dayOfTheWeek .date {
 
 .container .clock {
   position: relative;
-  height: 200px;
+  height: 300px;
 }
 
 .container .clock::after {

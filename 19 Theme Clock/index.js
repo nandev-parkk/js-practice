@@ -4,6 +4,23 @@
  *
  */
 
+// dark mode
+const body = document.body;
+const toggleBtnEl = document.querySelector(".toggle");
+
+toggleBtnEl.addEventListener("click", () => {
+  if (body.dataset.dark === undefined || body.dataset.dark === "false") {
+    body.dataset.dark = "true";
+    body.classList.add("dark-mode");
+    toggleBtnEl.textContent = "Light mode";
+  } else {
+    body.dataset.dark = "false";
+    body.classList.remove("dark-mode");
+    toggleBtnEl.textContent = "Dark mode";
+  }
+});
+
+// clock
 const containerEl = document.querySelector(".container");
 const clockEl = containerEl.querySelector(".clock");
 const hourHandEl = clockEl.querySelector(".hour-hand");
@@ -40,17 +57,8 @@ const monthArr = [
   "DEC",
 ];
 
-setInterval(() => {
+function update() {
   const today = new Date();
-
-  update(today);
-}, 1000);
-
-const scale = (num, in_min, in_max, out_min, out_max) => {
-  return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
-};
-
-function update(today) {
   const hour = today.getHours();
   const minute = today.getMinutes();
   const second = today.getSeconds();
@@ -95,20 +103,10 @@ function update(today) {
   `;
 }
 
-update(today);
+const scale = (num, in_min, in_max, out_min, out_max) => {
+  return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
+};
 
-// dark mode
-const body = document.body;
-const toggleBtnEl = document.querySelector(".toggle");
+update();
 
-toggleBtnEl.addEventListener("click", () => {
-  if (body.dataset.dark === undefined || body.dataset.dark === "false") {
-    body.dataset.dark = "true";
-    body.classList.add("dark-mode");
-    toggleBtnEl.textContent = "Light mode";
-  } else {
-    body.dataset.dark = "false";
-    body.classList.remove("dark-mode");
-    toggleBtnEl.textContent = "Dark mode";
-  }
-});
+setInterval(update, 1000);
