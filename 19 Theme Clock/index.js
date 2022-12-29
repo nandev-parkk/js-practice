@@ -30,7 +30,6 @@ const secondHandEl = clockEl.querySelector(".second-hand");
 const wrapperEl = containerEl.querySelector(".wrapper");
 const timeEl = wrapperEl.querySelector(".time");
 const dayOfTheWeekEl = wrapperEl.querySelector(".dayOfTheWeek");
-const today = new Date();
 
 const dayArr = [
   "SUNDAY",
