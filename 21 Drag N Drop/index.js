@@ -34,7 +34,6 @@ containerEls.forEach((el) => {
   // drag 요소가 container에 떨어지면 container에 boxEl 요소 추가 및 over 클래스 제거
   el.addEventListener("drop", (e) => {
     e.preventDefault();
-    console.log("drop");
     el.classList.remove("over");
     el.append(boxEl);
   });
