@@ -25,6 +25,7 @@
 20. Button Ripple Effect
 21. Drag N Drop
 22. Drawing App
+23. Kinetic Loader
 
 <br />
 출처: <a href="https://github.com/bradtraversy/50projects50days" target="_blank" rel="noreferrer noopenner">https://github.com/bradtraversy/50projects50days</a>

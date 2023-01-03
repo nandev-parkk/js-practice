@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+body {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darkslateblue;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2 {
+  font-weight: normal;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  position: absolute;
+  top: -9999;
+  left: -9999;
+  opacity: 0;
+  visibility: hidden;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+  display: block;
+}
+
+:root {
+  --color-white: #fff;
+  --color-black: #222;
+}
+
+.container {
+  position: relative;
+}
+
+.container .triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 60px solid transparent;
+}
+
+.container .triangle01 {
+  border-left-color: var(--color-white);
+  animation: rotate 2s linear infinite;
+}
+
+.container .triangle02 {
+  border-bottom-color: var(--color-white);
+  animation: rotate 2s linear infinite 0.5s;
+}
+
+@keyframes rotate {
+  0%,
+  25% {
+    transform: rotate(0deg);
+  }
+
+  50%,
+  75% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
