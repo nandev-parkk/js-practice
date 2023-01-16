@@ -1,0 +1,164 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+body {
+  position: relative;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2 {
+  font-weight: normal;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  position: absolute;
+  top: -9999;
+  left: -9999;
+  opacity: 0;
+  visibility: hidden;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+  display: block;
+}
+
+:root {
+  --color-white: #fff;
+  --color-black: #222;
+  --color-red: tomato;
+}
+
+.inner {
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-black);
+  height: 70px;
+  color: var(--color-white);
+  transition: 0.3s;
+}
+
+.header.active {
+  height: 55px;
+  background-color: var(--color-white);
+}
+
+.header .inner {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  width: min(1200px, 100%);
+}
+
+.header .logo {
+  font-size: 28px;
+}
+
+.header.active .logo {
+  color: var(--color-black);
+}
+
+.header .nav {
+}
+
+.header .nav a:not(:last-child) {
+  margin-right: 20px;
+}
+
+.header .nav a.active {
+  color: var(--color-red);
+}
+
+.header.active .nav a:not(.active) {
+  color: var(--color-black);
+}
+
+.visual {
+  width: 100%;
+  height: 100vh;
+  background: url("./images/img01.jpg") no-repeat center;
+  display: grid;
+  place-items: center;
+}
+
+.visual .title-group {
+  color: var(--color-white);
+  text-align: center;
+}
+
+.visual .title-group .title {
+  font-size: 48px;
+  margin-bottom: 14px;
+}
+
+.visual .title-group .desc {
+  font-size: 18px;
+}
+
+.contents {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contents .content {
+}
+
+.contents .content:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.contents .content .content-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contents .content .content-desc {
+  line-height: 1.6;
+}
