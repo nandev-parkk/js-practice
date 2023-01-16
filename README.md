@@ -28,6 +28,7 @@
 23. Kinetic Loader
 24. not yet
 25. Sticky Navbar
+26. Double Vertical Slider
 
 <br />
 출처: <a href="https://github.com/bradtraversy/50projects50days" target="_blank" rel="noreferrer noopenner">https://github.com/bradtraversy/50projects50days</a>
