@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+body {
+  position: relative;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2 {
+  font-weight: normal;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  position: absolute;
+  top: -9999;
+  left: -9999;
+  opacity: 0;
+  visibility: hidden;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+  display: block;
+}
+
+:root {
+  --color-white: #fff;
+  --color-black: #222;
+  --color-red: tomato;
+}
+
+.container {
+  height: 100vh;
+  background-color: purple;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.container .notification {
+  background-color: #fff;
+  border-radius: 4px;
+  color: purple;
+  padding: 1rem;
+}
+
+.container .notification:active {
+  transform: scale(0.98);
+}
+
+.container .toasts {
+  display: none;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.container .toasts.visible {
+  display: block;
+}
+
+.container .toast {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.container .toast:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.container .toast.info {
+  color: purple;
+}
+
+.container .toast.success {
+  color: green;
+}
+
+.container .toast.error {
+  color: red;
+}
