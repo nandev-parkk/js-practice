@@ -33,6 +33,7 @@
 28. Github Profiles
 29. Double Click Heart
 30. Auto Text Effect
+31. Good Cheap Fast
 
 <br />
 출처: <a href="https://github.com/bradtraversy/50projects50days" target="_blank" rel="noreferrer noopenner">https://github.com/bradtraversy/50projects50days</a>

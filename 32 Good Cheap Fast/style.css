@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2 {
+  font-weight: normal;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  position: absolute;
+  top: -9999;
+  left: -9999;
+  opacity: 0;
+  visibility: hidden;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+  display: block;
+}
+
+:root {
+  --color-white: #fff;
+  --color-black: #222;
+  --color-red: tomato;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container .title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.container .input-container {
+}
+
+.container .input-container .input-group {
+  display: flex;
+  align-items: center;
+}
+
+.container .input-container .input-group:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.container .input-container .input-group .input {
+  display: none;
+}
+
+.container .input-container .input-group .input:checked + .label::before {
+  transform: translate(38px, -50%);
+}
+
+.container .input-container .input-group .input:checked + .label {
+  background-color: purple;
+}
+
+.container .input-container .input-group .label {
+  cursor: pointer;
+  background-color: #ddd;
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  display: inline-block;
+  position: relative;
+  transition: 0.3s;
+  margin-right: 10px;
+}
+
+.container .input-container .input-group .label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+  transition: 0.3s;
+  background-color: #fff;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  z-index: 1;
+}
