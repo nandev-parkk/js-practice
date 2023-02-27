@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Password Generator</h1>
+      <div class="pw-container">
+        <p class="pw"></p>
+        <button type="button" class="copy">
+          <span class="material-icons"> content_paste </span>
+        </button>
+      </div>
+      <div class="condition-container">
+        <label for="length">Password Length</label>
+        <input type="number" name="" id="length" value="20" min="4" max="20" />
+      </div>
+      <div class="condition-container">
+        <label for="uppercase">Include uppercase letters</label>
+        <input type="checkbox" name="" id="uppercase" checked />
+      </div>
+      <div class="condition-container">
+        <label for="lowercase">Include lowercase letters</label>
+        <input type="checkbox" name="" id="lowercase" checked />
+      </div>
+      <div class="condition-container">
+        <label for="numbers">Include numbers</label>
+        <input type="checkbox" name="" id="numbers" checked />
+      </div>
+      <div class="condition-container">
+        <label for="symbols">Include symbols</label>
+        <input type="checkbox" name="" id="symbols" checked />
+      </div>
+      <button class="generate" type="button">Generate Password</button>
+    </div>
+  </body>
+</html>

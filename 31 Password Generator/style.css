@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: cadetblue;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2 {
+  font-weight: normal;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  position: absolute;
+  top: -9999;
+  left: -9999;
+  opacity: 0;
+  visibility: hidden;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+  display: block;
+}
+
+:root {
+  --color-white: #fff;
+  --color-black: #222;
+  --color-red: tomato;
+}
+
+.container {
+  width: min(340px, 100%);
+  padding: 20px;
+  background-color: midnightblue;
+}
+
+.container .title {
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container .pw-container {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.container .pw-container .pw {
+  background-color: #fff;
+  width: calc(100% - 40px);
+  height: 100%;
+  padding: 14px;
+}
+
+.container .pw-container button {
+  border: 1px solid #fff;
+  width: 40px;
+  height: 100%;
+  color: #fff;
+  cursor: pointer;
+}
+
+.container .pw-container button span {
+  font-size: 20px;
+}
+
+.container .condition-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container .condition-container:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.container .condition-container label {
+  color: #fff;
+}
+
+.container .condition-container input {
+}
+
+.container .condition-container input[type="number"] {
+  background-color: #fff;
+  width: 44px;
+  padding: 4px;
+}
+
+.container .generate {
+  width: 100%;
+  background-color: steelblue;
+  padding: 10px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
